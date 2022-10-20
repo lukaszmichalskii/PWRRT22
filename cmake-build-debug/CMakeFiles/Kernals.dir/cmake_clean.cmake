@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Kernals.dir/graphx/digraph.cpp.o"
+  "CMakeFiles/Kernals.dir/graphx/edge.cpp.o"
   "CMakeFiles/Kernals.dir/main.cpp.o"
   "Kernals"
   "Kernals.pdb"

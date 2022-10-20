@@ -123,6 +123,60 @@ Kernals/fast:
 	$(MAKE) -f CMakeFiles/Kernals.dir/build.make CMakeFiles/Kernals.dir/build
 .PHONY : Kernals/fast
 
+graphx/digraph.o: graphx/digraph.cpp.o
+
+.PHONY : graphx/digraph.o
+
+# target to build an object file
+graphx/digraph.cpp.o:
+	$(MAKE) -f CMakeFiles/Kernals.dir/build.make CMakeFiles/Kernals.dir/graphx/digraph.cpp.o
+.PHONY : graphx/digraph.cpp.o
+
+graphx/digraph.i: graphx/digraph.cpp.i
+
+.PHONY : graphx/digraph.i
+
+# target to preprocess a source file
+graphx/digraph.cpp.i:
+	$(MAKE) -f CMakeFiles/Kernals.dir/build.make CMakeFiles/Kernals.dir/graphx/digraph.cpp.i
+.PHONY : graphx/digraph.cpp.i
+
+graphx/digraph.s: graphx/digraph.cpp.s
+
+.PHONY : graphx/digraph.s
+
+# target to generate assembly for a file
+graphx/digraph.cpp.s:
+	$(MAKE) -f CMakeFiles/Kernals.dir/build.make CMakeFiles/Kernals.dir/graphx/digraph.cpp.s
+.PHONY : graphx/digraph.cpp.s
+
+graphx/edge.o: graphx/edge.cpp.o
+
+.PHONY : graphx/edge.o
+
+# target to build an object file
+graphx/edge.cpp.o:
+	$(MAKE) -f CMakeFiles/Kernals.dir/build.make CMakeFiles/Kernals.dir/graphx/edge.cpp.o
+.PHONY : graphx/edge.cpp.o
+
+graphx/edge.i: graphx/edge.cpp.i
+
+.PHONY : graphx/edge.i
+
+# target to preprocess a source file
+graphx/edge.cpp.i:
+	$(MAKE) -f CMakeFiles/Kernals.dir/build.make CMakeFiles/Kernals.dir/graphx/edge.cpp.i
+.PHONY : graphx/edge.cpp.i
+
+graphx/edge.s: graphx/edge.cpp.s
+
+.PHONY : graphx/edge.s
+
+# target to generate assembly for a file
+graphx/edge.cpp.s:
+	$(MAKE) -f CMakeFiles/Kernals.dir/build.make CMakeFiles/Kernals.dir/graphx/edge.cpp.s
+.PHONY : graphx/edge.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -159,6 +213,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Kernals"
+	@echo "... graphx/digraph.o"
+	@echo "... graphx/digraph.i"
+	@echo "... graphx/digraph.s"
+	@echo "... graphx/edge.o"
+	@echo "... graphx/edge.i"
+	@echo "... graphx/edge.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

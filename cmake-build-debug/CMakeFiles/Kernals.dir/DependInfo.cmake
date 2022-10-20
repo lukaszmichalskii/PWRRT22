@@ -4,6 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/mnt/d/Programming/PWRRT22/Kernals/graphx/digraph.cpp" "/mnt/d/Programming/PWRRT22/Kernals/cmake-build-debug/CMakeFiles/Kernals.dir/graphx/digraph.cpp.o"
+  "/mnt/d/Programming/PWRRT22/Kernals/graphx/edge.cpp" "/mnt/d/Programming/PWRRT22/Kernals/cmake-build-debug/CMakeFiles/Kernals.dir/graphx/edge.cpp.o"
   "/mnt/d/Programming/PWRRT22/Kernals/main.cpp" "/mnt/d/Programming/PWRRT22/Kernals/cmake-build-debug/CMakeFiles/Kernals.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

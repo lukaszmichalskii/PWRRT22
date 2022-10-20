@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/Kernals.dir/main.cpp.o  -o Kernals 
+/usr/bin/c++  -g   CMakeFiles/Kernals.dir/main.cpp.o CMakeFiles/Kernals.dir/graphx/digraph.cpp.o CMakeFiles/Kernals.dir/graphx/edge.cpp.o  -o Kernals 

@@ -82,6 +82,30 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/mnt/d/Programming/PWRRT22/Kernals/algorithm/backtracking.h">
+			<Option target="Kernals"/>
+		</Unit>
+		<Unit filename="/mnt/d/Programming/PWRRT22/Kernals/algorithm/cost_function.h">
+			<Option target="Kernals"/>
+		</Unit>
+		<Unit filename="/mnt/d/Programming/PWRRT22/Kernals/algorithm/tkp.h">
+			<Option target="Kernals"/>
+		</Unit>
+		<Unit filename="/mnt/d/Programming/PWRRT22/Kernals/algorithm/utilities.h">
+			<Option target="Kernals"/>
+		</Unit>
+		<Unit filename="/mnt/d/Programming/PWRRT22/Kernals/graphx/digraph.cpp">
+			<Option target="Kernals"/>
+		</Unit>
+		<Unit filename="/mnt/d/Programming/PWRRT22/Kernals/graphx/digraph.h">
+			<Option target="Kernals"/>
+		</Unit>
+		<Unit filename="/mnt/d/Programming/PWRRT22/Kernals/graphx/edge.cpp">
+			<Option target="Kernals"/>
+		</Unit>
+		<Unit filename="/mnt/d/Programming/PWRRT22/Kernals/graphx/edge.h">
+			<Option target="Kernals"/>
+		</Unit>
 		<Unit filename="/mnt/d/Programming/PWRRT22/Kernals/main.cpp">
 			<Option target="Kernals"/>
 		</Unit>
