@@ -54,8 +54,8 @@ Algorithm for solving Kernal problem
 ## Problem
 Problem can be represented as weighted directed graph $G=(V, E)$. Finding the path with minimum violations of the law
 might be realized by traversing the entire graph using [DFS (depth-first search)](https://en.wikipedia.org/wiki/Depth-first_search), [BFS (breadth-first search)](https://en.wikipedia.org/wiki/Breadth-first_search) or [Best-first search](https://en.wikipedia.org/wiki/Best-first_search), and keep updating the optimal
-solution. This approach time complexity is $O(|V|*|E|)$, where $|V|$ is the number of vertices (cities) and $|E|$ 
-is roads available.
+solution. This approach time complexity is $O(|V|\cdot|E|)$, where $|V|$ is the number of vertices (cities) and $|E|$ 
+is number of roads available.
 <!-- MODEL -->
 ### Model
 Using example input, we can create a model of the problem. The kingdom is represented as a directed graph
@@ -66,6 +66,7 @@ On the other hand, if a tourist travels contrary to the regulations he receives 
 ### Graph
 Example representation:
 - dashed arrows stands for illegal direction
+
 ![gd](https://user-images.githubusercontent.com/76202883/196942361-f31641c4-e507-4b2c-88bf-c1bc04a9d4a6.png)
 
 <!-- OPTIMIZATIONS -->
@@ -79,6 +80,9 @@ Using [*Branch and Bound*](https://en.wikipedia.org/wiki/Branch_and_bound) algor
 we shrink the state space using LB & UB and perform a search on reduced space. 
 In worst case this technique works like DFS or BFS.
 
+<!-- PROOF-OF-CONCEPT -->
+## Proof of Concept
+Prototype of described idea was written in Python 3 using [*networkx*](https://networkx.org/) package
 
 
 
