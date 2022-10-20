@@ -12,6 +12,7 @@
 [//]: # ([![MIT License][license-shield]][license-url])
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
+
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
@@ -46,6 +47,8 @@ Algorithm for solving Kernal problem
 * [Optimizations](#optimizations)
     * [Branch & Bound](#branch--bound)
 * [Proof of Concept](#proof-of-concept)
+* [Tests](#tests)
+* [Technologies](#technologies)
 
 
 
@@ -77,30 +80,67 @@ From problem specifications, we know the LB (lower bound) and UB (upper bound)
 <!-- BB -->
 ### Branch & Bound
 Using [*Branch and Bound*](https://en.wikipedia.org/wiki/Branch_and_bound) algorithm design paradigm for combinatorial optimization
-we shrink the state space using LB & UB and perform a search on reduced space. 
-In worst case this technique works like DFS or BFS.
+we shrink the state space using LB & UB and perform a search on reduced space. If we get
+a path from the start to our goal with a cost equal to 0 there is no need to check another possible path we found the optimal route
+based on mandate numbers (do not care about optimal path length). If during traversal we find the path that estimated cost
+exceeds the UB skip the unexplored part of the traversal tree (impossible to find a better solution there).
+In the worst case, this technique works like DFS/BFS or Best-first search.
 
 <!-- PROOF-OF-CONCEPT -->
 ## Proof of Concept
-Prototype of described idea was written in Python 3 using [*networkx*](https://networkx.org/) package
+Prototype of described idea was written in Python 3 using [*networkx*](https://networkx.org/) package.
+Implementation uses DFS as traversal method.
+
+<!-- TESTS -->
+## Tests
+Algorithm passed manual tests for problem instances avaliable in `resources/problem_instances`:
+- maze.txt
+- island.txt
+- input.txt
+
+<!-- TECHNOLOGIES -->
+## Technologies
+1. Application is build in C++ 14 standard using CLion IDE by JetBrains and WSL2 (Ubuntu 20.04.4 LTS).
+2. Prototype script written in Python 3.8.10 and [*networkx*](https://networkx.org/) package
+
+<!-- USAGE -->
+## Usage
+Root of the project contains `Kernals` file ready to use for manual testing. Program 
+as argument takes the absolute path to problem instance in space separated format:
+
+`5 5 2 3` - nodes number edges number starting point destination
+
+`1 2` - edge 1 -> 2
+
+`3 1` - edge 3 -> 1
+
+`3 4` - edge 3 -> 4
+
+`4 1` - edge 4 -> 1
+
+`4 2` - edge 4 -> 2
 
 
+![example](https://user-images.githubusercontent.com/76202883/196989203-4d63754f-3888-408f-8d81-c1ba01b284c4.png)
+
+
+Execute program in Linux environment:
+`./Kernals abs_filepath`
+
+Output (from example above): 
+
+`Min: 2,
+Path: [2 -> 1 -> 3]`
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/lukaszmichalskii/repo.svg?style=flat-square
-[contributors-url]: https://github.com/lukaszmichalskii/Tic-Tac-Toe/graphs/contributors
+[contributors-url]: https://github.com/lukaszmichalskii/PWRRT22/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/lukaszmichalskii/repo.svg?style=flat-square
-[forks-url]: https://github.com/lukaszmichalskii/Tic-Tac-Toe/network/members
+[forks-url]: https://github.com/lukaszmichalskii/PWRRT22/network/members
 [stars-shield]: https://img.shields.io/github/stars/lukaszmichalskii/repo.svg?style=flat-square
-[stars-url]: https://github.com/lukaszmichalskii/Tic-Tac-Toe/stargazers
+[stars-url]: https://github.com/lukaszmichalskii/PWRRT22/stargazers
 [issues-shield]: https://img.shields.io/github/issues/lukaszmichalskii/repo.svg?style=flat-square
-[issues-url]: https://github.com/lukaszmichalskii/Tic-Tac-Toe/issues
-[license-shield]: https://img.shields.io/badge/license-MIT-orange
-[license-url]: https://github.com/lukaszmichalskii/Tic-Tac-Toe/blob/master/LICENSE.txt
+[issues-url]: https://github.com/lukaszmichalskii/PWRRT22/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/lukasz-michalski-823106202/
-[jira-shield]: https://img.shields.io/badge/Jira-Join-blue
-[jira-url]: https://f1-database.atlassian.net/jira/software/projects/TTTG/boards/2
-[ci-shield]: https://img.shields.io/badge/CI-passing-green
-[ci-url]: https://github.com/lukaszmichalskii/Tic-Tac-Toe/actions/workflows/github-ci.yml
